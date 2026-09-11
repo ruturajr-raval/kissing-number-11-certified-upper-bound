@@ -3,6 +3,7 @@
   "project": "kissing-number-11-certified-upper-bound",
   "version": "0.1.0",
   "evaluated_at": "2026-09-11",
+  "candidate_claim": "An exact rational certificate at objective 86899/100 passes the primary Julia verifier, independent release-mode package verifier, final public CI and tag replay, immutable GitHub release verification, and byte-verified Zenodo archival, establishing tau_11 <= 868.",
   "supported_claim": "An exact rational certificate at objective 86899/100 passes primary and independent exact verification, final public CI and tag replay, immutable GitHub release verification, and byte-verified Zenodo archival, establishing tau_11 <= 868.",
   "gates": {
     "significant_original_result": true,

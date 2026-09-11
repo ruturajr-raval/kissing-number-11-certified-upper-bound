@@ -8,9 +8,13 @@
 | Author | Ruturaj R Raval |
 | Affiliation | Independent Researcher |
 | ORCID | `0000-0003-4930-8981` |
-| Version | `v0.1.0` |
+| Tagged release | [v0.1.0](https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0) |
+| Audited release commit | `7117e791a766f8595ba1bf5a6d3402a12d8440d0` |
 | Release date | 2026-09-11 |
 | License | MIT |
+| Version DOI | [10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475) |
+| Concept DOI | [10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474) |
+| Archive status | Published on Zenodo with independent byte verification |
 | Package status | published exact certificate release |
 
 ## Claim-Safe Public Summary

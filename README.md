@@ -1,5 +1,7 @@
 # Exact Certification of the 11-Dimensional Kissing-Number Upper Bound
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22699474.svg)](https://doi.org/10.5281/zenodo.22699474)
+
 ## Project Overview
 
 | Field | Value |
@@ -11,7 +13,7 @@
 | Problem | Certify the reported upper bound `tau_11 <= 868` |
 | Current result | A published compact exact certificate establishes `tau_11 <= 868` |
 | Result type | Exact rational semidefinite-program certificate |
-| Release | Immutable public release `v0.1.0` |
+| Release | `v0.1.0` |
 | Version DOI | [10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475) |
 | Concept DOI | [10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474) |
 | License | MIT |
@@ -283,7 +285,7 @@ after a failed gate. No GPU is used.
 
 ## Claims
 
-The supported result is:
+The supported claim proves the following exact bound:
 
 ```text
 The 11-dimensional kissing number satisfies tau_11 <= 868.
@@ -343,6 +345,9 @@ Future work is external mathematical review, peer review, optional formal
 proof-assistant verification, and application of the certificate format to
 other spherical-code bounds.
 
+The remaining limitation is that the exact value of `tau_11` and external
+peer review remain open.
+
 ## Repository Layout
 
 ```text
@@ -361,12 +366,16 @@ paper/        technical paper source and compiled release PDF
 
 The immutable public release is
 `https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0`.
+Its audited release commit is
+`7117e791a766f8595ba1bf5a6d3402a12d8440d0`.
 The archived version DOI is
 [10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475), and the
 concept DOI is
 [10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474).
 All four Zenodo files were independently downloaded and matched against the
 exact GitHub release inventory.
+Canonical citation metadata is in [CITATION.cff](CITATION.cff), and the
+release history is in [RELEASE_NOTES.md](RELEASE_NOTES.md).
 
 ## Authorship
 

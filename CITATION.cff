@@ -12,6 +12,10 @@ repository-artifact: "https://github.com/ruturajr-raval/kissing-number-11-certif
 version: 0.1.0
 date-released: 2026-09-11
 doi: "10.5281/zenodo.22699475"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22699475"
+    description: "Version DOI for the immutable v0.1.0 release"
 license: MIT
 abstract: >-
   Exact rational certification of the degree-17 Bachoc-Vallentin

@@ -79,6 +79,8 @@ https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releas
 - Includes the inspected paper PDF, deterministic source archive, standalone
   certificate-and-verifier archive, and `SHA256SUMS`.
 - Establishes `tau_11 <= 868`.
+- Claim boundary: the release does not determine `tau_11`, improve the
+  reported numerical optimum, or provide a new lower bound.
 - Publishes and independently byte-verifies Zenodo record `22699475`, version
   DOI `10.5281/zenodo.22699475`, and concept DOI
   `10.5281/zenodo.22699474`.
