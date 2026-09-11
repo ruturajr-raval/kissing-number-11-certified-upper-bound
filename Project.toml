@@ -1,0 +1,21 @@
+name = "KissingNumber11Certificate"
+uuid = "9c3c068e-290d-4c2f-b88e-c5c7c94430b2"
+authors = ["Ruturaj R Raval"]
+version = "0.1.0"
+
+[deps]
+ClusteredLowRankSolver = "cadeb640-247c-4e6d-a8b8-270aef5e1f95"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Nemo = "2edaba10-b0f1-5616-af89-8c11ac63239a"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+ClusteredLowRankSolver = {url = "https://github.com/nanleij/ClusteredLowRankSolver.jl.git", rev = "09ac81aed031bdea714832cf515244f6eb223531"}
+
+[compat]
+ClusteredLowRankSolver = "2.2"
+Nemo = "0.56"
+julia = "1.10, 1.11, 1.12"

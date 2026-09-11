@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "dimension": 11,
+  "degree": 17,
+  "certificate_limit_bytes": 52428800,
+  "full_expanded_term_upper_bound": 505535295,
+  "univariate_expanded_term_upper_bound": 52465,
+  "trivariate_expanded_term_upper_bound": 505482624,
+  "fixed_objective_expanded_terms": 206,
+  "trivariate_f_total_terms": 1665540,
+  "trivariate_f_nonzero_terms": 1663458,
+  "minimum_explicit_term_bytes": 56,
+  "trivariate_f_only_minimum_bytes": 93153648,
+  "trivariate_f_only_exceeds_50_mib": true,
+  "decision": "reject-explicit-affine-json"
+}

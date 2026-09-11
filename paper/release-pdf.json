@@ -1,0 +1,29 @@
+{
+  "build": {
+    "bundle_digest": "6ffe055852f8faf66c0acbe1a7fb27f87b869a90bad1204f3bf4d9683f597c7c",
+    "bundle_url": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+    "command": "SOURCE_DATE_EPOCH=1789084800 tectonic --bundle https://relay.fullyjustified.net/default_bundle_v33.tar --outdir build/paper --keep-logs paper/main.tex",
+    "engine": "Tectonic 0.17.0",
+    "engine_archive_sha256": "a3f1cac7c5678f01661a92212f58480ae3b0634115d880dbc59e2953ded45667",
+    "engine_platform": "darwin-arm64",
+    "engine_sha256": "b52b5a730e2b0b33087304f7720f649603953f270a6b1c88bb031e1ae01f7f9c",
+    "latex_log_sha256": "8cdf218d8764c5639d17cacfa8a0f8ef1f31ef87fecdaf9a67a8ba4e1e0676c4",
+    "source_date_epoch": 1789084800
+  },
+  "inspection": {
+    "date": "2026-09-11",
+    "pages_inspected": 4,
+    "result": "pass"
+  },
+  "pdf": {
+    "bytes": 64467,
+    "pages": 4,
+    "path": "paper/kissing-number-11-certified-upper-bound-paper-v0.1.0.pdf",
+    "sha256": "e03aaa15cfc756e03dc932ba49f44e927b04c3ecae706e947bd4058efb90fa2b"
+  },
+  "schema_version": 1,
+  "source": {
+    "path": "paper/main.tex",
+    "sha256": "10497b4eb664a3a9fa238e1e3bcf8cdabcdb626a88407a9cda67e1606c28e0bc"
+  }
+}

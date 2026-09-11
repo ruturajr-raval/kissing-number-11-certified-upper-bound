@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "dimension": 11,
+  "degree": 17,
+  "maximum_residual_degree": 34,
+  "univariate_coefficient_entries": 2757,
+  "univariate_maximum_degree": 34,
+  "univariate_sample_count": 35,
+  "univariate_samples_distinct": true,
+  "three_point_kernel_entries": 2109,
+  "three_point_maximum_degree": 34,
+  "trivariate_sos_block_count": 15,
+  "trivariate_sos_maximum_degree": 34,
+  "symmetric_residual_basis_count": 1461,
+  "canonical_sample_count": 1461,
+  "canonical_modular_rank_prime": 65521,
+  "canonical_modular_rank": 1461,
+  "symmetry_checks_pass": true,
+  "exact_field_checks_pass": true
+}

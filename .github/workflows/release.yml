@@ -1,0 +1,178 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >-
+      github.repository ==
+      'ruturajr-raval/kissing-number-11-certified-upper-bound'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11.9"
+
+      - name: Install C++ verifier dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libgmp-dev
+
+      - name: Verify exact release package
+        run: |
+          python -m unittest discover -s verifier/tests -v
+          python -m unittest discover -s test -p 'test_*.py' -v
+          make -C verifier/cpp clean test
+          python -I -E -s tools/release_manifest.py \
+            --check \
+            --require-clean \
+            --expected-commit "$GITHUB_SHA"
+
+      - name: Replay exact dimension-11 certificate
+        env:
+          KN11_EXPECTED_MANIFEST_SHA256: 1a1f02f07f345129eb1541f30c38cedab2f141af429837d9dce6da41af6c6086
+          KN11_EXPECTED_WITNESS_SHA256: bed94876a6275e7e680c682a0aeca8b8e65e6d55ba7b0b5f5833c5bd640e8229
+          KN11_EXPECTED_SOURCE_SPECIFICATION: bf84c3f2ff7a8c7c963eccf531e31399026ed17d9afa3b85ce1630152fd0fafa
+          KN11_EXPECTED_ROUNDING_SPECIFICATION: 23a6a7cb3b23a17b7cca6f12461558c15a79e9d928d3db83e53aff0533e19f27
+          KN11_EXPECTED_VERIFICATION_SPECIFICATION: a72606e8fc55123da96e7e76f577b48265b57a34f915f4033f3bc14a44aa2fe3
+        run: python -I -E -s tools/release_check.py --certificate-only
+
+      - name: Rehash certificate after replay
+        run: |
+          echo \
+            "1a1f02f07f345129eb1541f30c38cedab2f141af429837d9dce6da41af6c6086  certificates/kn11-degree17-certificate-v2.json" \
+            | sha256sum -c -
+          echo \
+            "bed94876a6275e7e680c682a0aeca8b8e65e6d55ba7b0b5f5833c5bd640e8229  certificates/kn11-degree17-witness-v2.bin" \
+            | sha256sum -c -
+
+      - name: Install pinned Tectonic
+        run: |
+          mkdir -p build/tectonic
+          curl -L --fail --silent --show-error \
+            -o build/tectonic/tectonic.tar.gz \
+            https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-unknown-linux-musl.tar.gz
+          echo \
+            "8533d07f9ccbd7a65824b9e0459041bca34af1eb33daba48f59215593753a3b7  build/tectonic/tectonic.tar.gz" \
+            | sha256sum -c -
+          tar -xzf build/tectonic/tectonic.tar.gz -C build/tectonic
+          echo \
+            "a98aa59ad5c1df39a6c9e56cbfc5088f2b11d6c179c0130b97998e4bd46a46da  build/tectonic/tectonic" \
+            | sha256sum -c -
+          test "$(build/tectonic/tectonic --version)" = "Tectonic 0.17.0"
+
+      - name: Build tag-bound release assets
+        run: |
+          make paper \
+            TECTONIC="$PWD/build/tectonic/tectonic" \
+            TECTONIC_ARCHIVE="$PWD/build/tectonic/tectonic.tar.gz"
+          make release-assets \
+            PYTHON=python \
+            RELEASE_REF="$GITHUB_REF" \
+            RELEASE_TAG="$GITHUB_REF_NAME"
+          make verify-release-assets \
+            PYTHON=python \
+            RELEASE_REF="$GITHUB_REF" \
+            RELEASE_TAG="$GITHUB_REF_NAME"
+
+      - name: Verify live release tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(
+            gh api \
+              "repos/$GITHUB_REPOSITORY/commits/$GITHUB_REF_NAME" \
+              --jq .sha
+          )" = "$GITHUB_SHA"
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+
+      - name: Stage GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" \
+            --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            test "$(
+              gh release view "$GITHUB_REF_NAME" \
+                --repo "$GITHUB_REPOSITORY" \
+                --json isDraft \
+                --jq .isDraft
+            )" = "true"
+          else
+            gh release create "$GITHUB_REF_NAME" \
+              dist/release/* \
+              --repo "$GITHUB_REPOSITORY" \
+              --draft \
+              --title "$GITHUB_REF_NAME" \
+              --notes-file RELEASE_NOTES.md \
+              --verify-tag
+          fi
+          python tools/build_release_assets.py \
+            --check-remote \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$GITHUB_SHA" \
+            --tag "$GITHUB_REF_NAME" \
+            --remote-state draft \
+            --compare-local
+
+      - name: Upload verified release evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: kn11-${{ github.ref_name }}-verified-release
+          path: |
+            dist/release
+            logs/degree17-release-verification.log
+            build/paper/main.log
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+
+      - name: Publish immutable GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(
+            gh api \
+              "repos/$GITHUB_REPOSITORY/commits/$GITHUB_REF_NAME" \
+              --jq .sha
+          )" = "$GITHUB_SHA"
+          python tools/build_release_assets.py \
+            --check-remote \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$GITHUB_SHA" \
+            --tag "$GITHUB_REF_NAME" \
+            --remote-state draft \
+            --compare-local
+          gh release edit "$GITHUB_REF_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --draft=false \
+            --latest \
+            --verify-tag
+          python tools/build_release_assets.py \
+            --check-remote \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$GITHUB_SHA" \
+            --tag "$GITHUB_REF_NAME" \
+            --remote-state published \
+            --compare-local \
+            --require-immutable
+
+      - name: Assert tracked tree unchanged
+        if: always()
+        run: git diff --exit-code

@@ -1,0 +1,32 @@
+{
+  "title": "Exact Certification of the 11-Dimensional Kissing-Number Upper Bound",
+  "upload_type": "software",
+  "description": "Exact rational certification of the degree-17 Bachoc-Vallentin three-point semidefinite-program bound tau_11 <= 868. The package fixes the objective at 86899/100, verifies all 1,497 affine identities and 70 matrix blocks, and includes an independent standard-library Python replay. The result improves the previously rigorous integer upper bound from 869 to 868; it does not determine tau_11 or claim a new numerical optimum.",
+  "creators": [
+    {
+      "name": "Raval, Ruturaj R",
+      "affiliation": "Independent Researcher",
+      "orcid": "0000-0003-4930-8981"
+    }
+  ],
+  "license": "MIT",
+  "version": "0.1.0",
+  "publication_date": "2026-09-11",
+  "keywords": [
+    "kissing number",
+    "spherical codes",
+    "semidefinite programming",
+    "exact certification",
+    "rational arithmetic",
+    "discrete geometry",
+    "computer-assisted proof"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The release includes the inspected technical paper PDF, deterministic source archive, standalone exact certificate-and-verifier archive, and SHA-256 inventory. DOI fields remain unassigned until the exact public GitHub release assets have been archived and independently verified."
+}

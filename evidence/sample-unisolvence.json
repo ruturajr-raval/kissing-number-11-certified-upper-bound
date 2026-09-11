@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "dimension": 11,
+  "degree": 17,
+  "sample_sha256": "9b8af0d4133749c485c9e36269d2f606a18427a3c17af7875665c5d293f97351",
+  "seed": 1935,
+  "decimal_digits": 4,
+  "construction_precision": 256,
+  "univariate_sample_count": 35,
+  "univariate_distinct": true,
+  "trivariate_sample_count": 1461,
+  "symmetric_basis_count": 1461,
+  "modular_prime": 65521,
+  "modular_rank": 1461,
+  "full_rank": true,
+  "canonical_samples_file": "canonical-samples.json",
+  "canonical_samples_sha256": "dbaa3b3e3e994d6e3d6c993d1c6c60699eaae35796517eab7f7fb09c6a2ce20d"
+}
