@@ -1,6 +1,6 @@
 # Independent Compact Certificate Verifier
 
-This directory contains the independent verifier for the candidate exact
+This directory contains the independent verifier for the published exact
 certificate of
 
 ```text
@@ -86,6 +86,6 @@ for the dimension-3, degree-2 pilot at objective 15. It exercises the generic
 library end to end, including the bounded exact-PSD fallback for singular
 small blocks. It is not a certificate for the dimension-11 theorem.
 
-The real degree-17 witness passes this verifier locally under the published
-time and memory limits. Public release remains gated by clean hosted replay
-and immutable publication anchors.
+The real degree-17 witness passes this verifier under the published time and
+memory limits. Clean hosted replay, immutable GitHub publication, and
+independent Zenodo archive verification all pass.

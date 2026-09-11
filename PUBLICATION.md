@@ -8,10 +8,10 @@
 | Author | Ruturaj R Raval |
 | Affiliation | Independent Researcher |
 | ORCID | `0000-0003-4930-8981` |
-| Candidate version | `v0.1.0` |
+| Version | `v0.1.0` |
 | Release date | 2026-09-11 |
 | License | MIT |
-| Package status | public hosted-replay verified release candidate |
+| Package status | published exact certificate release |
 
 ## Claim-Safe Public Summary
 
@@ -55,10 +55,11 @@ The supported result and proof infrastructure are:
 Both dependency audits, in-snapshot captured-byte replay, fail-closed
 publication, installed-file release-mode replay, and the final prior-art
 refresh pass. Public candidate run `34547450259` passes on commit
-`ca28575103a1342d443d23fdc96ad2d67b162fb0`, and its uploaded paper and
-release assets are byte-identical to the local inventory. Publication remains
-fail-closed pending CI on the final release commit and immutable tag-bound
-assets.
+`ca28575103a1342d443d23fdc96ad2d67b162fb0`. Final main run `34548095999`,
+tag run `34548683594`, and release workflow `34548683544` pass on release
+commit `7117e791a766f8595ba1bf5a6d3402a12d8440d0`. GitHub release `386719977`
+is immutable, and Zenodo record `22699475` independently matches all four
+exact GitHub release files.
 
 ## Verification Evidence
 
@@ -115,13 +116,14 @@ can be reused for other spherical-code semidefinite bounds.
 
 ## Claim Boundary And Limitations
 
-This package locally proves `tau_11 <= 868`, but does not determine `tau_11`,
-improve the reported numerical optimum, or provide a new lower bound.
+This package proves `tau_11 <= 868`, but does not determine `tau_11`, improve
+the reported numerical optimum, or provide a new lower bound.
 
 The certificate size, verification runtime, and peak-memory gates pass.
-The manuscript builds and passes four-page visual inspection. Public candidate
-hosted replay passes. External peer review and immutable publication binding
-remain open. The final prior-art refresh passes.
+The manuscript builds and passes four-page visual inspection. Final public
+main and tag hosted replays pass, and immutable GitHub and Zenodo publication
+binding is complete. External peer review remains open. The final prior-art
+refresh passes.
 
 ## Provenance Boundary
 
@@ -141,19 +143,22 @@ formal proof-assistant verification have not occurred.
 Public candidate run `34547450259` passed all 16 workflow steps from
 2026-09-11T00:40:00Z through 2026-09-11T00:46:52Z. Artifact `10179696591`
 contains the exact paper, verification log, and deterministic release files.
+Final main run `34548095999`, tag run `34548683594`, and release workflow
+`34548683544` also passed. The immutable release assets and public Zenodo
+downloads match the same SHA-256 inventory.
 
 ## Archive And Citation
 
-Candidate `v0.1.0` has passed public hosted replay. The final release commit,
-immutable tag, GitHub release, version DOI, and concept DOI remain pending.
+Release `v0.1.0` is immutable. The version DOI is
+[10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475), and the
+concept DOI is
+[10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474).
+Zenodo publication followed verification of the exact public GitHub release
+asset set.
 
-The citation record and archive metadata are prepared. Zenodo creation and
-publication occur only after the exact GitHub release assets are public and
-verified.
+## Completed Acceptance Gate
 
-## Remaining Acceptance Gate
-
-Release requires:
+Release required and passed:
 
 1. numerical objective below `868.84` (passed);
 2. a stable fixed-objective point at `86899/100` (passed);
@@ -165,7 +170,10 @@ Release requires:
 8. inspected paper (passed);
 9. clean local replay and public candidate hosted replay (passed; run
    `34547450259`);
-10. immutable public `v0.1.0` tag and GitHub release;
-11. Zenodo draft replacement and duplicate verification from the exact GitHub
-    asset set;
-12. Zenodo publication and independent byte-for-byte download verification.
+10. final main, tag, and release workflows (passed; runs `34548095999`,
+    `34548683594`, and `34548683544`);
+11. immutable public `v0.1.0` tag and GitHub release (passed; release
+    `386719977`);
+12. Zenodo draft replacement, duplicate verification, publication, and
+    independent byte-for-byte download verification (passed; record
+    `22699475`).

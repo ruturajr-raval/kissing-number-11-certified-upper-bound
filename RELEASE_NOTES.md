@@ -69,12 +69,16 @@ https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releas
 - Records successful public candidate run `34547450259` on commit
   `ca28575103a1342d443d23fdc96ad2d67b162fb0`; the downloaded hosted paper and
   release inventory match the local files byte for byte.
+- Records successful final main run `34548095999`, tag run `34548683594`, and
+  release workflow `34548683544` on release commit
+  `7117e791a766f8595ba1bf5a6d3402a12d8440d0`.
 - Adds 16 tests for deterministic release assets, committed-paper binding, and
   Zenodo metadata and file verification.
-- Publishes the release through a verified draft and only then makes the
-  GitHub release immutable.
+- Publishes immutable GitHub release `386719977` from the exact annotated
+  `v0.1.0` tag before creating the Zenodo archive from its verified assets.
 - Includes the inspected paper PDF, deterministic source archive, standalone
   certificate-and-verifier archive, and `SHA256SUMS`.
 - Establishes `tau_11 <= 868`.
-- Leaves DOI fields unassigned until Zenodo archives and independently
-  verifies the exact immutable GitHub release files.
+- Publishes and independently byte-verifies Zenodo record `22699475`, version
+  DOI `10.5281/zenodo.22699475`, and concept DOI
+  `10.5281/zenodo.22699474`.

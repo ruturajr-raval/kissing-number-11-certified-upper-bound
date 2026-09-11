@@ -43,7 +43,8 @@ coefficient identity pass. The final prior-art refresh completed on
 Exact verified result. The 14,565,324-byte compressed package
 passes release-mode replay in 907.16 seconds using 187,596,800 bytes maximum
 RSS. The paper builds and passes visual inspection. Prior-art refresh passes.
-Public hosted replay, the immutable release tag, and DOI are pending.
+Public hosted replay and the immutable release pass. The archived version DOI
+is `10.5281/zenodo.22699475`.
 
 ## License Plan
 
@@ -51,5 +52,5 @@ The intended choice is arXiv's perpetual, non-exclusive license.
 
 ## Submission Status
 
-Hold. Do not submit before the public GitHub release and Zenodo archive are
-published and byte-verified.
+Ready for submission. The public GitHub release and Zenodo archive are
+published and byte-verified; no automatic submission has been performed.

@@ -3,7 +3,7 @@
   "project": "kissing-number-11-certified-upper-bound",
   "version": "0.1.0",
   "evaluated_at": "2026-09-11",
-  "candidate_claim": "An exact rational certificate at objective 86899/100 passes the primary Julia verifier and the independent release-mode package verifier, establishing tau_11 <= 868 subject to public hosted replay and immutable publication gates.",
+  "supported_claim": "An exact rational certificate at objective 86899/100 passes primary and independent exact verification, final public CI and tag replay, immutable GitHub release verification, and byte-verified Zenodo archival, establishing tau_11 <= 868.",
   "gates": {
     "significant_original_result": true,
     "prior_art_refreshed": true,
@@ -52,12 +52,21 @@
     "candidate_paper_build_passes": true,
     "paper_build_and_inspection_passes": true,
     "clean_hosted_ci_passes": true,
-    "immutable_github_release_passes": false,
-    "zenodo_archive_passes": false
+    "immutable_github_release_passes": true,
+    "zenodo_archive_passes": true
   },
-  "decision": "ready_for_release_commit",
-  "reason": "The exact certificate, compact export, release-mode independent replay, 50 MB size gate, two-hour/16 GiB resource gate, final prior-art refresh, manuscript inspection, and public candidate hosted replay pass. Release now requires CI on the final release-readiness commit, an immutable tag-bound GitHub release, and byte-verified Zenodo archival.",
+  "decision": "published",
+  "reason": "All ordered gates pass: exact verification, compactness and resource limits, prior-art refresh, manuscript inspection, public candidate and final hosted replay, immutable tag-bound GitHub release, and independently byte-verified Zenodo archival of the exact release files.",
   "hosted_ci": {
+    "scope": "public result repository",
+    "status": "success",
+    "run_id": 34548095999,
+    "artifact_id": 10179940594,
+    "commit": "7117e791a766f8595ba1bf5a6d3402a12d8440d0",
+    "completed_at": "2026-09-11T00:56:48Z",
+    "hosted_assets_match_local": true
+  },
+  "candidate_hosted_ci": {
     "scope": "public result repository",
     "status": "success",
     "run_id": 34547450259,
@@ -67,6 +76,61 @@
     "completed_at": "2026-09-11T00:46:52Z",
     "runner_steps": 16,
     "hosted_assets_match_local": true
+  },
+  "tag_hosted_ci": {
+    "scope": "annotated public tag v0.1.0",
+    "status": "success",
+    "run_id": 34548683594,
+    "artifact_id": 10180152574,
+    "commit": "7117e791a766f8595ba1bf5a6d3402a12d8440d0",
+    "completed_at": "2026-09-11T01:05:26Z"
+  },
+  "release_workflow": {
+    "status": "success",
+    "run_id": 34548683544,
+    "artifact_id": 10180111564,
+    "commit": "7117e791a766f8595ba1bf5a6d3402a12d8440d0",
+    "completed_at": "2026-09-11T01:03:48Z"
+  },
+  "github_release": {
+    "release_id": 386719977,
+    "tag": "v0.1.0",
+    "tag_target": "7117e791a766f8595ba1bf5a6d3402a12d8440d0",
+    "immutable": true,
+    "tag_ruleset_id": 22850274,
+    "asset_inventory_verified": true,
+    "assets": [
+      {
+        "name": "SHA256SUMS",
+        "bytes": 382,
+        "sha256": "fb0f4bdeffe2d8f58f6fadc620e10ef4d58eac111157c0c655cf6e7a65a7ff21"
+      },
+      {
+        "name": "kissing-number-11-certified-upper-bound-certificate-v0.1.0.tar.gz",
+        "bytes": 14706287,
+        "sha256": "917cee47a0435db1cf9ae5911d85ba996a78e8414ef5b811693a62456fd009a5"
+      },
+      {
+        "name": "kissing-number-11-certified-upper-bound-paper-v0.1.0.pdf",
+        "bytes": 64467,
+        "sha256": "e03aaa15cfc756e03dc932ba49f44e927b04c3ecae706e947bd4058efb90fa2b"
+      },
+      {
+        "name": "kissing-number-11-certified-upper-bound-source-v0.1.0.tar.gz",
+        "bytes": 14820807,
+        "sha256": "ee4d19c255a03a273407f35899736714a85a7a20769bc2ad2efbf345766f72ca"
+      }
+    ]
+  },
+  "zenodo_archive": {
+    "record_id": 22699475,
+    "concept_record_id": 22699474,
+    "version_doi": "10.5281/zenodo.22699475",
+    "concept_doi": "10.5281/zenodo.22699474",
+    "publication_date": "2026-09-11",
+    "status": "published",
+    "exact_github_asset_set_verified": true,
+    "independent_download_verification_passes": true
   },
   "certificate_metrics": {
     "manifest_sha256": "1a1f02f07f345129eb1541f30c38cedab2f141af429837d9dce6da41af6c6086",
@@ -86,7 +150,7 @@
     "verification_memory_gib": 16
   },
   "doi": {
-    "version": "not yet assigned",
-    "concept": "not yet assigned"
+    "version": "10.5281/zenodo.22699475",
+    "concept": "10.5281/zenodo.22699474"
   }
 }

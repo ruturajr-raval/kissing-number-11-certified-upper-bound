@@ -28,5 +28,5 @@
       "scheme": "url"
     }
   ],
-  "notes": "The release includes the inspected technical paper PDF, deterministic source archive, standalone exact certificate-and-verifier archive, and SHA-256 inventory. DOI fields remain unassigned until the exact public GitHub release assets have been archived and independently verified."
+  "notes": "The release includes the inspected technical paper PDF, deterministic source archive, standalone exact certificate-and-verifier archive, and SHA-256 inventory. Zenodo record 22699475 was published from the exact immutable GitHub release assets and independently byte-verified; its version DOI is 10.5281/zenodo.22699475 and concept DOI is 10.5281/zenodo.22699474."
 }

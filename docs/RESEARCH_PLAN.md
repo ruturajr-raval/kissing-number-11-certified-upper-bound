@@ -100,9 +100,11 @@ passes.
 Current evidence: the local mathematical, compactness, resource, and
 manuscript gates pass. The four-page manuscript builds without TeX errors or
 warnings and passes visual inspection. The final prior-art refresh completed
-on 2026-09-10 without locating an equivalent public certificate. The ordered
-remaining steps are public hosted replay, an immutable tag-bound GitHub
-release, and Zenodo archival of the exact verified GitHub asset set.
+on 2026-09-10 without locating an equivalent public certificate. Public
+candidate, final-main, tag, and release workflows pass. GitHub release
+`386719977` is immutable, and Zenodo record `22699475` was published from the
+exact verified GitHub asset set and independently download-verified. Stage 6
+is complete.
 
 ## Resource And Kill Gates
 

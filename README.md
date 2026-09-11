@@ -9,11 +9,11 @@
 | ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
 | Field | Discrete geometry, semidefinite programming, and exact computation |
 | Problem | Certify the reported upper bound `tau_11 <= 868` |
-| Current result | A compact exact certificate establishes `tau_11 <= 868`; public hosted replay passes |
+| Current result | A published compact exact certificate establishes `tau_11 <= 868` |
 | Result type | Exact rational semidefinite-program certificate |
-| Release | `v0.1.0` public release candidate |
-| Version DOI | not yet assigned |
-| Concept DOI | not yet assigned |
+| Release | Immutable public release `v0.1.0` |
+| Version DOI | [10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475) |
+| Concept DOI | [10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474) |
 | License | MIT |
 
 This repository develops a compact, independently checkable exact certificate
@@ -103,8 +103,8 @@ are:
     and 1,461 symmetric trivariate coefficients in 907.16 seconds using
     187,596,800 bytes maximum RSS.
 
-Publication remains fail-closed until the final release commit passes public
-CI and immutable tag-bound asset verification passes.
+The final release commit, annotated tag, release workflow, immutable GitHub
+release, and independent Zenodo download verification all pass.
 
 ## Method And Proof Architecture
 
@@ -184,7 +184,7 @@ need not reproduce the fixture bytes. Julia reconstructs every original
 matrix exactly. Python parses the same retained bytes and independently
 verifies the exact objective and both polynomial identities.
 
-The release-candidate certificate files are:
+The released certificate files are:
 
 - manifest SHA-256
   `1a1f02f07f345129eb1541f30c38cedab2f141af429837d9dce6da41af6c6086`;
@@ -335,17 +335,13 @@ independent replay, size, and resource gates are complete.
 The four-page manuscript builds without TeX warnings or errors and passes
 visual inspection.
 
-The immediate gates are:
+The final release commit passed public CI, the annotated `v0.1.0` tag and
+GitHub release are immutable, and Zenodo record `22699475` was created from
+the exact public GitHub assets and independently download-verified.
 
-1. Create the final release-readiness commit and pass public CI on that exact
-   commit.
-2. Freeze that exact commit, annotated `v0.1.0` tag, and immutable
-   GitHub release assets.
-3. Create, verify twice, publish, and independently download-verify the Zenodo
-   version from those exact public assets.
-
-The mathematical certificate no longer needs redesign. Remaining work is
-publication hardening and external verification.
+Future work is external mathematical review, peer review, optional formal
+proof-assistant verification, and application of the certificate format to
+other spherical-code bounds.
 
 ## Repository Layout
 
@@ -363,10 +359,14 @@ paper/        technical paper source and compiled release PDF
 
 ## Publication Citation And Archive
 
-The public repository and candidate hosted replay are complete. The final
-release-commit replay, immutable GitHub release, version DOI, concept DOI, and
-independent archive download verification remain pending the ordered
-publication gates.
+The immutable public release is
+`https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0`.
+The archived version DOI is
+[10.5281/zenodo.22699475](https://doi.org/10.5281/zenodo.22699475), and the
+concept DOI is
+[10.5281/zenodo.22699474](https://doi.org/10.5281/zenodo.22699474).
+All four Zenodo files were independently downloaded and matched against the
+exact GitHub release inventory.
 
 ## Authorship
 

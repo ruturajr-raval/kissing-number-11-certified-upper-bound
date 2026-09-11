@@ -11,6 +11,7 @@ repository-code: "https://github.com/ruturajr-raval/kissing-number-11-certified-
 repository-artifact: "https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0"
 version: 0.1.0
 date-released: 2026-09-11
+doi: "10.5281/zenodo.22699475"
 license: MIT
 abstract: >-
   Exact rational certification of the degree-17 Bachoc-Vallentin
@@ -35,4 +36,5 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0003-4930-8981"
   year: 2026
   version: 0.1.0
+  doi: "10.5281/zenodo.22699475"
   url: "https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releases/tag/v0.1.0"
