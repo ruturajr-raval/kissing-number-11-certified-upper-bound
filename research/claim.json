@@ -5,7 +5,7 @@
   "author": "Ruturaj R Raval",
   "affiliation": "Independent Researcher",
   "orcid": "0000-0003-4930-8981",
-  "status": "public release candidate",
+  "status": "public hosted-replay verified release candidate",
   "audit_date": "2026-09-10",
   "target": {
     "theorem": "tau_11 <= 868",
@@ -21,7 +21,7 @@
     "certification_gap": "No equivalent public exact or outward-rounded dimension-11 certificate below 869 was located in the audit refreshed on 2026-09-10."
   },
   "current_supported_claim": {
-    "statement": "An exact rational certificate at objective 86899/100 passes the primary Julia verifier and the independent release-mode package verifier, establishing tau_11 <= 868. Public hosted replay and immutable publication anchors remain pending."
+    "statement": "An exact rational certificate at objective 86899/100 passes the primary Julia verifier, independent release-mode package verifier, and public candidate hosted replay, establishing tau_11 <= 868. Final release-commit replay and immutable publication anchors remain pending."
   },
   "verification": {
     "unit_tests_pass": true,
@@ -103,13 +103,18 @@
     "candidate_manuscript_visual_inspection_passes": true,
     "candidate_manuscript_build_engine": "Tectonic 0.17.0",
     "candidate_manuscript_pdf_bytes": 64467,
-    "candidate_manuscript_pdf_sha256": "e03aaa15cfc756e03dc932ba49f44e927b04c3ecae706e947bd4058efb90fa2b"
+    "candidate_manuscript_pdf_sha256": "e03aaa15cfc756e03dc932ba49f44e927b04c3ecae706e947bd4058efb90fa2b",
+    "public_candidate_hosted_replay_passes": true,
+    "public_candidate_commit": "ca28575103a1342d443d23fdc96ad2d67b162fb0",
+    "public_candidate_ci_run_id": 34547450259,
+    "public_candidate_ci_artifact_id": 10179696591,
+    "public_candidate_ci_completed_at": "2026-09-11T00:46:52Z"
   },
   "limitations": [
-    "The package is a public release candidate and has not yet been bound to an immutable tag and archive.",
+    "The package has passed public candidate hosted replay but has not yet been bound to an immutable tag and archive.",
     "The exact value of tau_11 remains open.",
     "No new numerical optimum or lower bound is claimed.",
-    "The final prepublication prior-art refresh passes. Clean replay in the public result repository and immutable publication anchors remain pending.",
+    "The final prepublication prior-art refresh and public candidate hosted replay pass. Final release-commit replay and immutable publication anchors remain pending.",
     "The first zero-slack checkpoint encoded process-local FLINT handles and remains rejected; its portable replacement, exact bundle, compact export, and independent replay pass.",
     "The recorded Julia hashes identify the current local candidate runtime, not a released universal binary."
   ],

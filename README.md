@@ -9,7 +9,7 @@
 | ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
 | Field | Discrete geometry, semidefinite programming, and exact computation |
 | Problem | Certify the reported upper bound `tau_11 <= 868` |
-| Current result | A compact exact certificate establishes `tau_11 <= 868`; public release gates remain |
+| Current result | A compact exact certificate establishes `tau_11 <= 868`; public hosted replay passes |
 | Result type | Exact rational semidefinite-program certificate |
 | Release | `v0.1.0` public release candidate |
 | Version DOI | not yet assigned |
@@ -103,8 +103,8 @@ are:
     and 1,461 symmetric trivariate coefficients in 907.16 seconds using
     187,596,800 bytes maximum RSS.
 
-Publication remains fail-closed until public hosted replay and immutable
-tag-bound asset verification pass.
+Publication remains fail-closed until the final release commit passes public
+CI and immutable tag-bound asset verification passes.
 
 ## Method And Proof Architecture
 
@@ -337,8 +337,9 @@ visual inspection.
 
 The immediate gates are:
 
-1. Pass clean hosted replay in the public result repository.
-2. Freeze the exact release commit, annotated `v0.1.0` tag, and immutable
+1. Create the final release-readiness commit and pass public CI on that exact
+   commit.
+2. Freeze that exact commit, annotated `v0.1.0` tag, and immutable
    GitHub release assets.
 3. Create, verify twice, publish, and independently download-verify the Zenodo
    version from those exact public assets.
@@ -362,9 +363,10 @@ paper/        technical paper source and compiled release PDF
 
 ## Publication Citation And Archive
 
-The public repository and `v0.1.0` metadata are prepared. The immutable GitHub
-release, version DOI, concept DOI, and independent archive download
-verification remain pending the ordered publication gates.
+The public repository and candidate hosted replay are complete. The final
+release-commit replay, immutable GitHub release, version DOI, concept DOI, and
+independent archive download verification remain pending the ordered
+publication gates.
 
 ## Authorship
 

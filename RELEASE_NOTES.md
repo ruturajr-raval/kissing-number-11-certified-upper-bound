@@ -66,6 +66,9 @@ https://github.com/ruturajr-raval/kissing-number-11-certified-upper-bound/releas
 - Adds a public hosted workflow that replays the exact certificate, rebuilds
   the paper from the tagged source, constructs deterministic release archives,
   and verifies local and remote asset digests.
+- Records successful public candidate run `34547450259` on commit
+  `ca28575103a1342d443d23fdc96ad2d67b162fb0`; the downloaded hosted paper and
+  release inventory match the local files byte for byte.
 - Adds 16 tests for deterministic release assets, committed-paper binding, and
   Zenodo metadata and file verification.
 - Publishes the release through a verified draft and only then makes the

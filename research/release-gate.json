@@ -51,14 +51,22 @@
     "verification_under_two_hours_16_gib": true,
     "candidate_paper_build_passes": true,
     "paper_build_and_inspection_passes": true,
-    "clean_hosted_ci_passes": false
+    "clean_hosted_ci_passes": true,
+    "immutable_github_release_passes": false,
+    "zenodo_archive_passes": false
   },
-  "decision": "hold",
-  "reason": "The exact certificate, compact export, release-mode independent replay, 50 MB size gate, two-hour/16 GiB resource gate, final prior-art refresh, and manuscript inspection pass. Release remains on hold for clean replay in the public result repository, an immutable tag-bound GitHub release, and byte-verified Zenodo archival.",
+  "decision": "ready_for_release_commit",
+  "reason": "The exact certificate, compact export, release-mode independent replay, 50 MB size gate, two-hour/16 GiB resource gate, final prior-art refresh, manuscript inspection, and public candidate hosted replay pass. Release now requires CI on the final release-readiness commit, an immutable tag-bound GitHub release, and byte-verified Zenodo archival.",
   "hosted_ci": {
     "scope": "public result repository",
-    "status": "pending",
-    "required_conclusion": "success"
+    "status": "success",
+    "run_id": 34547450259,
+    "artifact_id": 10179696591,
+    "commit": "ca28575103a1342d443d23fdc96ad2d67b162fb0",
+    "started_at": "2026-09-11T00:40:00Z",
+    "completed_at": "2026-09-11T00:46:52Z",
+    "runner_steps": 16,
+    "hosted_assets_match_local": true
   },
   "certificate_metrics": {
     "manifest_sha256": "1a1f02f07f345129eb1541f30c38cedab2f141af429837d9dce6da41af6c6086",

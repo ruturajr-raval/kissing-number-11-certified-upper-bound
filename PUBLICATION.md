@@ -11,7 +11,7 @@
 | Candidate version | `v0.1.0` |
 | Release date | 2026-09-11 |
 | License | MIT |
-| Package status | public release candidate |
+| Package status | public hosted-replay verified release candidate |
 
 ## Claim-Safe Public Summary
 
@@ -54,8 +54,11 @@ The supported result and proof infrastructure are:
 
 Both dependency audits, in-snapshot captured-byte replay, fail-closed
 publication, installed-file release-mode replay, and the final prior-art
-refresh pass. Public release remains fail-closed pending hosted replay in the
-public result repository and immutable tag-bound assets.
+refresh pass. Public candidate run `34547450259` passes on commit
+`ca28575103a1342d443d23fdc96ad2d67b162fb0`, and its uploaded paper and
+release assets are byte-identical to the local inventory. Publication remains
+fail-closed pending CI on the final release commit and immutable tag-bound
+assets.
 
 ## Verification Evidence
 
@@ -116,8 +119,8 @@ This package locally proves `tau_11 <= 868`, but does not determine `tau_11`,
 improve the reported numerical optimum, or provide a new lower bound.
 
 The certificate size, verification runtime, and peak-memory gates pass.
-The manuscript builds and passes four-page visual inspection.
-External peer review, hosted clean replay, and immutable publication binding
+The manuscript builds and passes four-page visual inspection. Public candidate
+hosted replay passes. External peer review and immutable publication binding
 remain open. The final prior-art refresh passes.
 
 ## Provenance Boundary
@@ -135,10 +138,14 @@ language have undergone internal adversarial review. The paper
 build and page layout also pass local inspection. External peer review and
 formal proof-assistant verification have not occurred.
 
+Public candidate run `34547450259` passed all 16 workflow steps from
+2026-09-11T00:40:00Z through 2026-09-11T00:46:52Z. Artifact `10179696591`
+contains the exact paper, verification log, and deterministic release files.
+
 ## Archive And Citation
 
-Candidate `v0.1.0` is prepared for the public repository. The immutable tag,
-GitHub release, version DOI, and concept DOI remain pending.
+Candidate `v0.1.0` has passed public hosted replay. The final release commit,
+immutable tag, GitHub release, version DOI, and concept DOI remain pending.
 
 The citation record and archive metadata are prepared. Zenodo creation and
 publication occur only after the exact GitHub release assets are public and
@@ -156,7 +163,8 @@ Release requires:
 6. verification below two hours and 16 GiB RAM (passed);
 7. refreshed prior art (passed);
 8. inspected paper (passed);
-9. clean local replay (passed) and public hosted replay;
+9. clean local replay and public candidate hosted replay (passed; run
+   `34547450259`);
 10. immutable public `v0.1.0` tag and GitHub release;
 11. Zenodo draft replacement and duplicate verification from the exact GitHub
     asset set;
